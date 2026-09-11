@@ -1,0 +1,3382 @@
+{
+    "metaData": {
+        "type": "EMSolution_Input",
+        "version": "1.0",
+        "releaseDate": "May 8, 2024",
+        "creationDate": "2026-08-16 11:11:13",
+        "comments": "transient (PMSM)"
+    },
+    "0_Release_Number": {
+        "RLS_NO": "r10.2"
+    },
+    "1_Execution_Control": {
+        "PRE_PROCESSING": 1,
+        "MAKE_SYSTEM_MATRICES": 1,
+        "SOLVE_EQUATION": 1,
+        "POST_PROCESSING": 1
+    },
+    "2_Analysis_Type": {
+        "STATIC": 0,
+        "AC": 0,
+        "TRANSIENT": 1,
+        "NON_LINEAR": 1,
+        "STEADY_CURRENT": 0
+    },
+    "3_Potential_Gauge_Conditions": {
+        "POTENTIAL": 0,
+        "NODAL_FORCE_OPTION": 0,
+        "PHI_OPTION": 0,
+        "FIXED_COORDINATE": 0,
+        "TREE_GAUGE": -1,
+        "REGULARIZATION": 0,
+        "RENUMBERING": 0,
+        "SCALING": 0,
+        "LINE_SEARCH": 1,
+        "MATRIX_ASYMMETRICITY": 0
+    },
+    "4_Shape_Function_Order_Added_Features": {
+        "NODE_ORDER": 1,
+        "EDGE_ORDER": 1,
+        "METRIC_MOD": 0,
+        "QUAD_TRI": 0,
+        "CALC_IND": 0,
+        "THIN_ELEM": 0,
+        "PARALLEL_NO": 0,
+        "PARALLEL_OPTION": 0
+    },
+    "5_Convergence_Conditions": {
+        "ICCG_CONV": 1e-08,
+        "ACCEL_FACTOR": 1,
+        "DIV_FACTOR": 100,
+        "DIV_ITERATIONS": 100,
+        "SOLVER": 0,
+        "THETA": 0.66666666,
+        "THETA_NETWORK": 0.5,
+        "THETA_MOTION": 0.5,
+        "MAX_ITERATIONS": 0,
+        "5_2_Nonlinear_Convergence_Condition": {
+            "NON_LINEAR_CONV": 0.001,
+            "RELAXATION": 1,
+            "NO_ITERATIONS": 40,
+            "INIT_OPTION": 0,
+            "ICCG_CONV_RATIO": 0.001,
+            "CHECK_B": -0.01,
+            "DELTA_A": 0,
+            "NON_LINEAR_METHOD": 0
+        }
+    },
+    "6_Gaussian_Integral_Point": {
+        "POINTS_IN_1D": 3,
+        "POINT_IN_TRIANGLE": 7,
+        "MAT_POINTS": 1
+    },
+    "7_Initial_Conditions": {
+        "INITIAL_STEP": 1,
+        "DATA_TYPE": 0,
+        "INITIAL_PHASE": 0,
+        "MULTI": 0,
+        "OUTPUT_STEP_NO": 0,
+        "CYCLE_AC": 0
+    },
+    "8_Calculation_Step": {
+        "NO_STEPS": [
+            49
+        ],
+        "DELTA_TIME": [
+            8.627e-05
+        ],
+        "INITIAL_TIME": -8.627e-05,
+        "CYCLE": 0,
+        "TP_EEC": {
+            "N_CORRECT": 0,
+            "N_BACK": 0,
+            "TP_EEC_OPTION": 0,
+            "MAX_NO_CORRECTION": 0
+        }
+    },
+    "9_Output_Step": {
+        "TIME_DIFF": 3,
+        "RESTART_FILE_OPTION": 0,
+        "ALL_STEP_OUTPUT": 1,
+        "OUTPUT_STEP_SET": [
+            [
+                1,
+                49,
+                1
+            ]
+        ]
+    },
+    "10_1_Input_Files": {
+        "INPUT_MESH_FILE": 11,
+        "UNIT": 0,
+        "NO_MESH": 2,
+        "MESHLESS": 0
+    },
+    "10_2_Output_Files": {
+        "POST_DATA_FILE": 5,
+        "ELEM_OUT": 1,
+        "NODE_OUT": 1,
+        "AVERAGE": 0,
+        "WIDE": 0
+    },
+    "10_3_Post_Files": {
+        "MESH": 1,
+        "CURRENT": 1,
+        "MAGNETIC": 1,
+        "FORCE_J_B": 0,
+        "FORCE_NODAL": 1,
+        "DISP": 1,
+        "HEAT": 0
+    },
+    "11_Print_Output": {
+        "HEAT": 0,
+        "FORCE_NODAL": {
+            "TYPE": 1
+        },
+        "GAP_B": 1
+    },
+    "12_Geometry": {
+        "GEOMETRY": 1,
+        "DELTA_Z_THETA": 0.01,
+        "COORDINATE": [
+            {
+                "COORD_ID": 1,
+                "TYPE": 2,
+                "XYZ0": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "EX_XYZ": [
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "EZ_XYZ": [
+                    0.0,
+                    0.0,
+                    1.0
+                ]
+            }
+        ]
+    },
+    "13_Boundary_Conditions": {
+        "FAR_BOUNDARY_CONDITION": 0,
+        "PHI_BOUNDARY_CONDITION": 0,
+        "DISTANCE_JUDGE": 1e-05
+    },
+    "14_Periodic_Boundary_Conditions": {
+        "PERIODIC_CONDITION": [
+            {
+                "CYCLIC": 2,
+                "SYMMETRY": 0,
+                "ANGLE": 360.0,
+                "SLIDE_CONDITION": [
+                    {
+                        "SLIDE_NDIV": 1512,
+                        "SLIDE_MAT_ID": 99,
+                        "FITNESS": 0.01
+                    }
+                ]
+            }
+        ]
+    },
+    "16_Material_Properties": {
+        "EXTEND_TOTAL_for_COIL": 0,
+        "16_1_3D_Element_Properties": [
+            {
+                "MAT_ID": 10,
+                "MAT_NAME": "stator",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0,
+                    "BH_CURVE_ID": 1,
+                    "PACKING": {
+                        "PACKING_FACTOR": 0.98,
+                        "COORD_ID": 0,
+                        "PACKING_DIRECTION": [
+                            0.0,
+                            0.0,
+                            1.0
+                        ]
+                    }
+                }
+            },
+            {
+                "MAT_ID": 20,
+                "MAT_NAME": "rotor",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0,
+                    "BH_CURVE_ID": 2
+                }
+            },
+            {
+                "MAT_ID": 40,
+                "MAT_NAME": "rotor_airgap",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 41,
+                "MAT_NAME": "stator_airgap",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30,
+                "MAT_NAME": "shaft",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 50,
+                "MAT_NAME": "outside_air",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30000,
+                "MAT_NAME": "winding_left0",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35000,
+                "MAT_NAME": "winding_right_0",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30001,
+                "MAT_NAME": "winding_left1",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35001,
+                "MAT_NAME": "winding_right_1",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30002,
+                "MAT_NAME": "winding_left2",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35002,
+                "MAT_NAME": "winding_right_2",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30003,
+                "MAT_NAME": "winding_left3",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35003,
+                "MAT_NAME": "winding_right_3",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30004,
+                "MAT_NAME": "winding_left4",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35004,
+                "MAT_NAME": "winding_right_4",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30005,
+                "MAT_NAME": "winding_left5",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35005,
+                "MAT_NAME": "winding_right_5",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30006,
+                "MAT_NAME": "winding_left6",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35006,
+                "MAT_NAME": "winding_right_6",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30007,
+                "MAT_NAME": "winding_left7",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35007,
+                "MAT_NAME": "winding_right_7",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30008,
+                "MAT_NAME": "winding_left8",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35008,
+                "MAT_NAME": "winding_right_8",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30009,
+                "MAT_NAME": "winding_left9",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35009,
+                "MAT_NAME": "winding_right_9",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30010,
+                "MAT_NAME": "winding_left10",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35010,
+                "MAT_NAME": "winding_right_10",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30011,
+                "MAT_NAME": "winding_left11",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35011,
+                "MAT_NAME": "winding_right_11",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30012,
+                "MAT_NAME": "winding_left12",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35012,
+                "MAT_NAME": "winding_right_12",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30013,
+                "MAT_NAME": "winding_left13",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35013,
+                "MAT_NAME": "winding_right_13",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30014,
+                "MAT_NAME": "winding_left14",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35014,
+                "MAT_NAME": "winding_right_14",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30015,
+                "MAT_NAME": "winding_left15",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35015,
+                "MAT_NAME": "winding_right_15",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30016,
+                "MAT_NAME": "winding_left16",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35016,
+                "MAT_NAME": "winding_right_16",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30017,
+                "MAT_NAME": "winding_left17",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35017,
+                "MAT_NAME": "winding_right_17",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30018,
+                "MAT_NAME": "winding_left18",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35018,
+                "MAT_NAME": "winding_right_18",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30019,
+                "MAT_NAME": "winding_left19",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35019,
+                "MAT_NAME": "winding_right_19",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30020,
+                "MAT_NAME": "winding_left20",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35020,
+                "MAT_NAME": "winding_right_20",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30021,
+                "MAT_NAME": "winding_left21",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35021,
+                "MAT_NAME": "winding_right_21",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30022,
+                "MAT_NAME": "winding_left22",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35022,
+                "MAT_NAME": "winding_right_22",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30023,
+                "MAT_NAME": "winding_left23",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35023,
+                "MAT_NAME": "winding_right_23",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30024,
+                "MAT_NAME": "winding_left24",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35024,
+                "MAT_NAME": "winding_right_24",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30025,
+                "MAT_NAME": "winding_left25",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35025,
+                "MAT_NAME": "winding_right_25",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30026,
+                "MAT_NAME": "winding_left26",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35026,
+                "MAT_NAME": "winding_right_26",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30027,
+                "MAT_NAME": "winding_left27",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35027,
+                "MAT_NAME": "winding_right_27",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30028,
+                "MAT_NAME": "winding_left28",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35028,
+                "MAT_NAME": "winding_right_28",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30029,
+                "MAT_NAME": "winding_left29",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35029,
+                "MAT_NAME": "winding_right_29",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30030,
+                "MAT_NAME": "winding_left30",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35030,
+                "MAT_NAME": "winding_right_30",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30031,
+                "MAT_NAME": "winding_left31",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35031,
+                "MAT_NAME": "winding_right_31",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30032,
+                "MAT_NAME": "winding_left32",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35032,
+                "MAT_NAME": "winding_right_32",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30033,
+                "MAT_NAME": "winding_left33",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35033,
+                "MAT_NAME": "winding_right_33",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30034,
+                "MAT_NAME": "winding_left34",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35034,
+                "MAT_NAME": "winding_right_34",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 30035,
+                "MAT_NAME": "winding_left35",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 35035,
+                "MAT_NAME": "winding_right_35",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 58000000.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 600100,
+                "MAT_NAME": "slot",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.0
+                }
+            },
+            {
+                "MAT_ID": 50000,
+                "MAT_NAME": "magnet_0_0",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 51000,
+                "MAT_NAME": "magnet_0_1",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 52000,
+                "MAT_NAME": "magnet_0_2",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 53000,
+                "MAT_NAME": "magnet_0_3",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 54000,
+                "MAT_NAME": "magnet_0_4",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 55000,
+                "MAT_NAME": "magnet_0_5",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 56000,
+                "MAT_NAME": "magnet_0_6",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 57000,
+                "MAT_NAME": "magnet_0_7",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 58000,
+                "MAT_NAME": "magnet_0_8",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 59000,
+                "MAT_NAME": "magnet_0_9",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 60000,
+                "MAT_NAME": "magnet_0_10",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 61000,
+                "MAT_NAME": "magnet_0_11",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 62000,
+                "MAT_NAME": "magnet_0_12",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 63000,
+                "MAT_NAME": "magnet_0_13",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 64000,
+                "MAT_NAME": "magnet_0_14",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 65000,
+                "MAT_NAME": "magnet_0_15",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 66000,
+                "MAT_NAME": "magnet_0_16",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 67000,
+                "MAT_NAME": "magnet_0_17",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 68000,
+                "MAT_NAME": "magnet_0_18",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 69000,
+                "MAT_NAME": "magnet_0_19",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 70000,
+                "MAT_NAME": "magnet_0_20",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 71000,
+                "MAT_NAME": "magnet_0_21",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 72000,
+                "MAT_NAME": "magnet_0_22",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 73000,
+                "MAT_NAME": "magnet_0_23",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 74000,
+                "MAT_NAME": "magnet_0_24",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 75000,
+                "MAT_NAME": "magnet_0_25",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 76000,
+                "MAT_NAME": "magnet_0_26",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 77000,
+                "MAT_NAME": "magnet_0_27",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 78000,
+                "MAT_NAME": "magnet_0_28",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 79000,
+                "MAT_NAME": "magnet_0_29",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 80000,
+                "MAT_NAME": "magnet_0_30",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 81000,
+                "MAT_NAME": "magnet_0_31",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 82000,
+                "MAT_NAME": "magnet_0_32",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 83000,
+                "MAT_NAME": "magnet_0_33",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 84000,
+                "MAT_NAME": "magnet_0_34",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 85000,
+                "MAT_NAME": "magnet_0_35",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 86000,
+                "MAT_NAME": "magnet_0_36",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 87000,
+                "MAT_NAME": "magnet_0_37",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 88000,
+                "MAT_NAME": "magnet_0_38",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 89000,
+                "MAT_NAME": "magnet_0_39",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 90000,
+                "MAT_NAME": "magnet_0_40",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            },
+            {
+                "MAT_ID": 91000,
+                "MAT_NAME": "magnet_0_41",
+                "POTENTIAL": 0,
+                "ElectricProperty": {
+                    "conductivity": {
+                        "SIGMA": 0.0
+                    }
+                },
+                "MagneticProperty": {
+                    "MU": 1.05
+                }
+            }
+        ]
+    },
+    "17_Field_Source": [
+        {
+            "PHICOIL": {
+                "SERIES_ID": 1,
+                "IN_ROTOR": 0,
+                "data": [
+                    {
+                        "MAT_IDS": [
+                            30002
+                        ],
+                        "SMAT_ID": 30002,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30007
+                        ],
+                        "SMAT_ID": 30007,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30014
+                        ],
+                        "SMAT_ID": 30014,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30019
+                        ],
+                        "SMAT_ID": 30019,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30026
+                        ],
+                        "SMAT_ID": 30026,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30031
+                        ],
+                        "SMAT_ID": 30031,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35000
+                        ],
+                        "SMAT_ID": 35000,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35007
+                        ],
+                        "SMAT_ID": 35007,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35012
+                        ],
+                        "SMAT_ID": 35012,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35019
+                        ],
+                        "SMAT_ID": 35019,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35024
+                        ],
+                        "SMAT_ID": 35024,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35031
+                        ],
+                        "SMAT_ID": 35031,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30001
+                        ],
+                        "SMAT_ID": 30001,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30008
+                        ],
+                        "SMAT_ID": 30008,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30013
+                        ],
+                        "SMAT_ID": 30013,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30020
+                        ],
+                        "SMAT_ID": 30020,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30025
+                        ],
+                        "SMAT_ID": 30025,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30032
+                        ],
+                        "SMAT_ID": 30032,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35001
+                        ],
+                        "SMAT_ID": 35001,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35006
+                        ],
+                        "SMAT_ID": 35006,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35013
+                        ],
+                        "SMAT_ID": 35013,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35018
+                        ],
+                        "SMAT_ID": 35018,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35025
+                        ],
+                        "SMAT_ID": 35025,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35030
+                        ],
+                        "SMAT_ID": 35030,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    }
+                ]
+            }
+        },
+        {
+            "PHICOIL": {
+                "SERIES_ID": 2,
+                "IN_ROTOR": 0,
+                "data": [
+                    {
+                        "MAT_IDS": [
+                            30006
+                        ],
+                        "SMAT_ID": 30006,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30011
+                        ],
+                        "SMAT_ID": 30011,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30018
+                        ],
+                        "SMAT_ID": 30018,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30023
+                        ],
+                        "SMAT_ID": 30023,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30030
+                        ],
+                        "SMAT_ID": 30030,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30035
+                        ],
+                        "SMAT_ID": 30035,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35004
+                        ],
+                        "SMAT_ID": 35004,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35011
+                        ],
+                        "SMAT_ID": 35011,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35016
+                        ],
+                        "SMAT_ID": 35016,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35023
+                        ],
+                        "SMAT_ID": 35023,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35028
+                        ],
+                        "SMAT_ID": 35028,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35035
+                        ],
+                        "SMAT_ID": 35035,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30000
+                        ],
+                        "SMAT_ID": 30000,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30005
+                        ],
+                        "SMAT_ID": 30005,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30012
+                        ],
+                        "SMAT_ID": 30012,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30017
+                        ],
+                        "SMAT_ID": 30017,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30024
+                        ],
+                        "SMAT_ID": 30024,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30029
+                        ],
+                        "SMAT_ID": 30029,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35005
+                        ],
+                        "SMAT_ID": 35005,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35010
+                        ],
+                        "SMAT_ID": 35010,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35017
+                        ],
+                        "SMAT_ID": 35017,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35022
+                        ],
+                        "SMAT_ID": 35022,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35029
+                        ],
+                        "SMAT_ID": 35029,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35034
+                        ],
+                        "SMAT_ID": 35034,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    }
+                ]
+            }
+        },
+        {
+            "PHICOIL": {
+                "SERIES_ID": 3,
+                "IN_ROTOR": 0,
+                "data": [
+                    {
+                        "MAT_IDS": [
+                            30003
+                        ],
+                        "SMAT_ID": 30003,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30010
+                        ],
+                        "SMAT_ID": 30010,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30015
+                        ],
+                        "SMAT_ID": 30015,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30022
+                        ],
+                        "SMAT_ID": 30022,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30027
+                        ],
+                        "SMAT_ID": 30027,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30034
+                        ],
+                        "SMAT_ID": 30034,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35003
+                        ],
+                        "SMAT_ID": 35003,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35008
+                        ],
+                        "SMAT_ID": 35008,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35015
+                        ],
+                        "SMAT_ID": 35015,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35020
+                        ],
+                        "SMAT_ID": 35020,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35027
+                        ],
+                        "SMAT_ID": 35027,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35032
+                        ],
+                        "SMAT_ID": 35032,
+                        "CURRENT": -25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30004
+                        ],
+                        "SMAT_ID": 30004,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30009
+                        ],
+                        "SMAT_ID": 30009,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30016
+                        ],
+                        "SMAT_ID": 30016,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30021
+                        ],
+                        "SMAT_ID": 30021,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30028
+                        ],
+                        "SMAT_ID": 30028,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            30033
+                        ],
+                        "SMAT_ID": 30033,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35002
+                        ],
+                        "SMAT_ID": 35002,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35009
+                        ],
+                        "SMAT_ID": 35009,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35014
+                        ],
+                        "SMAT_ID": 35014,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35021
+                        ],
+                        "SMAT_ID": 35021,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35026
+                        ],
+                        "SMAT_ID": 35026,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    },
+                    {
+                        "MAT_IDS": [
+                            35033
+                        ],
+                        "SMAT_ID": 35033,
+                        "CURRENT": 25,
+                        "SIGMA": 0.0,
+                        "CAL_Je": 0
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 50000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 1100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 51000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 2100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 52000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 3100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 53000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 4100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 54000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 5100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 55000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 6100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 56000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 7100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 57000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 8100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 58000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 9100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 59000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 10100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 60000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 11100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 61000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 12100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 62000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 13100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 63000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 14100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 64000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 15100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 65000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 16100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 66000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 17100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 67000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 18100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 68000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 19100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 69000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 20100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 70000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 21100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 71000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 22100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 72000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 23100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 73000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 24100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 74000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 25100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 75000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 26100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 76000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 27100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 77000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 28100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 78000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 29100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 79000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 30100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 80000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 31100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 81000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 32100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 82000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 33100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 83000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 34100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 84000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 35100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 85000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 36100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 86000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 37100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 87000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 38100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 88000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 39100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 89000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 40100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 90000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            1.3,
+                            0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "MAGNET": {
+                "SERIES_ID": 41100,
+                "TIME_ID": 9998,
+                "INPUT_TYPE": 0,
+                "data": [
+                    {
+                        "MAT_ID": 91000,
+                        "COORD_ID": 1,
+                        "MXYZ": [
+                            -1.3,
+                            -0.0,
+                            0.0
+                        ],
+                        "M": 1.3
+                    }
+                ]
+            }
+        },
+        {
+            "NETWORK": {
+                "REGION_FACTOR": 1.0,
+                "REGION_PARALLEL": 1,
+                "data": [
+                    {
+                        "type": "FEM",
+                        "ID": 1,
+                        "START": 1,
+                        "END": 2,
+                        "SERIES_ID": 1
+                    },
+                    {
+                        "type": "CPS",
+                        "ID": 2,
+                        "START": 2,
+                        "END": 9999,
+                        "TIME_ID": 1
+                    },
+                    {
+                        "type": "FEM",
+                        "ID": 3,
+                        "START": 1,
+                        "END": 3,
+                        "SERIES_ID": 2
+                    },
+                    {
+                        "type": "CPS",
+                        "ID": 4,
+                        "START": 3,
+                        "END": 9999,
+                        "TIME_ID": 2
+                    },
+                    {
+                        "type": "FEM",
+                        "ID": 5,
+                        "START": 1,
+                        "END": 4,
+                        "SERIES_ID": 3
+                    },
+                    {
+                        "type": "CPS",
+                        "ID": 6,
+                        "START": 4,
+                        "END": 9999,
+                        "TIME_ID": 3
+                    },
+                    {
+                        "type": "R",
+                        "ID": 7,
+                        "START": 9999,
+                        "END": 1,
+                        "RESISTANCE": 1000000.0
+                    }
+                ]
+            }
+        }
+    ],
+    "18_Time_Function": [
+        {
+            "TIME_ID": 9999,
+            "OPTION": 0,
+            "C0": 5.714286,
+            "C1": 2760,
+            "C2": 0.0,
+            "C3": 0.0,
+            "C4": 0.0,
+            "C5": 0.0,
+            "C6": 0.0,
+            "TEXP": 0.0,
+            "TCYCLE": 0.0,
+            "PHASE4": 0.0
+        },
+        {
+            "TIME_ID": 9998,
+            "OPTION": 0,
+            "C0": 1.0,
+            "C1": 0.0,
+            "C2": 0.0,
+            "C3": 0.0,
+            "C4": 0.0,
+            "C5": 0.0,
+            "C6": 0.0,
+            "TEXP": 0.0,
+            "TCYCLE": 0.0,
+            "PHASE4": 0.0
+        },
+        {
+            "phase_no": 1,
+            "TIME_ID": 1,
+            "OPTION": 2,
+            "AMPLITUDE": 4,
+            "TCYCLE": 0.006211180124223602,
+            "PHASE": 90.0
+        },
+        {
+            "phase_no": 2,
+            "TIME_ID": 2,
+            "OPTION": 2,
+            "AMPLITUDE": 4,
+            "TCYCLE": 0.006211180124223602,
+            "PHASE": -30.0
+        },
+        {
+            "phase_no": 3,
+            "TIME_ID": 3,
+            "OPTION": 2,
+            "AMPLITUDE": 4,
+            "TCYCLE": 0.006211180124223602,
+            "PHASE": -150.0
+        }
+    ],
+    "19_Motion": [
+        {
+            "motion_data": {
+                "MOTION_ID": 1,
+                "X_TIME_ID": 0,
+                "Y_TIME_ID": 0,
+                "Z_TIME_ID": 0,
+                "PHI_TIME_ID": 9999,
+                "COORD_ID": 0
+            },
+            "type": "SLIDE_MOTION",
+            "comment": "ROTOR_MOTION_ID equal to MOTION_ID"
+        }
+    ],
+    "20_BH_Curve": [
+        {
+            "BH_CURVE_ID": 1,
+            "BH_CURVE_NAME": "20HX1200",
+            "encrypted_data": "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"
+        },
+        {
+            "BH_CURVE_ID": 2,
+            "BH_CURVE_NAME": "SUS430",
+            "encrypted_data": "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"
+        }
+    ]
+}

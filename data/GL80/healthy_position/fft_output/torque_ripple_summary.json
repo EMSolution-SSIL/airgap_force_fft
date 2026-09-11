@@ -1,0 +1,9 @@
+{
+  "mean_torque_Nm": 0.9708737207762891,
+  "min_torque_Nm": 0.9576676506629322,
+  "max_torque_Nm": 0.9840887109132807,
+  "peak_to_peak_ripple_Nm": 0.026421060250348405,
+  "rms_ripple_Nm": 0.00861364330613596,
+  "peak_to_peak_ripple_percent_of_mean": 2.7213693897516054,
+  "rms_ripple_percent_of_mean": 0.8872053205074582
+}

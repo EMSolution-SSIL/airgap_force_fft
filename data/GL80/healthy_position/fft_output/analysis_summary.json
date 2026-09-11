@@ -1,0 +1,121 @@
+{
+  "config_path": "C:\\EMSolution\\build\\MeshMorphingWorkspace\\airgap_force_fft\\GL80\\healthy_position\\config.yaml",
+  "effective_config": {
+    "input": {
+      "path": "motorGapB.json",
+      "format": "auto",
+      "csv": {
+        "step_col": "time",
+        "theta_col": "theta_deg",
+        "br_col": "Br",
+        "bt_col": "Btheta"
+      },
+      "sector": {
+        "periods": "auto",
+        "angle_deg": null,
+        "symmetricity": null,
+        "resample_spatial": true,
+        "spatial_samples": null
+      }
+    },
+    "geometry": {
+      "radius_m": null,
+      "stack_length_m": null
+    },
+    "analysis": {
+      "max_order": 120,
+      "max_step_frequency": null,
+      "dominant_count": 60,
+      "rotor_speed_rpm": null,
+      "include_dc": false,
+      "exclude_time_endpoint_for_fft": true,
+      "torque_reference_json": "output_transient.json",
+      "torque_ripple": {
+        "dominant_count": 12,
+        "positive_sign": -1.0
+      },
+      "mode_pair_contributions": {
+        "enabled": true,
+        "target_count": 12,
+        "pairs_per_target": 12
+      }
+    },
+    "plotting": {
+      "sparse_modes": {
+        "enabled": true,
+        "top_n": 100,
+        "min_relative": 0.02,
+        "max_time_order": null,
+        "time_order_min": null,
+        "time_order_max": null,
+        "space_order_min": 0,
+        "space_order_max": null,
+        "positive_space_only": true,
+        "label_top_n": 0
+      },
+      "heatmap": {
+        "enabled": false
+      },
+      "mode_grid": {
+        "enabled": true,
+        "filename": "airgap_2d_fft_4panel.png"
+      },
+      "torque_comparison": {
+        "enabled": true,
+        "filename": "torque_comparison.png"
+      }
+    },
+    "output": {
+      "dir": "fft_output"
+    }
+  },
+  "step_count": 49,
+  "fft_step_count": 48,
+  "exclude_time_endpoint_for_fft": true,
+  "theta_count": 1512,
+  "radius_m": 0.0405915790445102,
+  "stack_length_m": 0.01,
+  "step_name": "time",
+  "step_unit": "Hz",
+  "metadata": {
+    "input_format": "emsolution_gapb_json",
+    "time_unit": "second",
+    "magnetic_density_unit": "T",
+    "sector_angle_deg": 360.0,
+    "sector_periods": 1,
+    "symmetricity": 0,
+    "original_theta_count": 1512,
+    "theta_count": 1512,
+    "radius_from_json_m": 0.0405915790445102,
+    "z_min_m": 0.005,
+    "z_max_m": 0.005,
+    "stack_length_from_2z_m": 0.01
+  },
+  "outputs": [
+    "Br_2d_fft.png",
+    "Br_dominant_modes.csv",
+    "Br_m0_temporal_spectrum.csv",
+    "Br_spectrum.npz",
+    "Btheta_2d_fft.png",
+    "Btheta_dominant_modes.csv",
+    "Btheta_m0_temporal_spectrum.csv",
+    "Btheta_spectrum.npz",
+    "Fr_2d_fft.png",
+    "Fr_dominant_modes.csv",
+    "Fr_m0_temporal_spectrum.csv",
+    "Fr_spectrum.npz",
+    "Ftheta_2d_fft.png",
+    "Ftheta_dominant_modes.csv",
+    "Ftheta_m0_temporal_spectrum.csv",
+    "Ftheta_spectrum.npz",
+    "Torque_temporal_spectrum.csv",
+    "airgap_2d_fft_4panel.png",
+    "analysis_summary.json",
+    "integrated_metrics.csv",
+    "mode_pair_contributions.csv",
+    "torque_comparison.png",
+    "torque_reference_comparison.csv",
+    "torque_ripple_orders.csv",
+    "torque_ripple_summary.json"
+  ]
+}

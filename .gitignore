@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+.env
+
+# Build artifacts
+build/
+dist/
+release_dist/
+release_smoke/
+*.egg-info/
+
+# Local editor settings
+.vscode/
+
+# Large generated FFT arrays; keep source inputs, reports, CSV summaries, and figures as needed.
+data/GL80/*
+!data/GL80/README.md
+!data/GL80/healthy_position/
+!data/GL80/healthy_position/**
+data/**/*.npz
+config_csv.yaml
+docs/GL80_ecc*
