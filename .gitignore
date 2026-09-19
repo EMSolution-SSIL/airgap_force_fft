@@ -28,4 +28,10 @@ data/GL80/*
 !data/GL80/healthy_position/**
 data/**/*.npz
 config_csv.yaml
-docs/GL80_ecc*
+# Documentation
+# Keep project reports and working notes local. Only the public user guide,
+# reference prototype, and general method note are version-controlled.
+/docs/*
+!/docs/README_airgap_force_fft.md
+!/docs/airgap_force_fft_prototype.py
+!/docs/airgap_fft_2d_method.md

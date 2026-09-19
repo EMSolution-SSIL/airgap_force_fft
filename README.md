@@ -76,11 +76,11 @@ The comparison plot uses rotor-positive convention: `-Ftheta integrated`, `-stat
 
 ## Reports
 
-Key analysis reports are in `docs/`:
+Public documentation is in `docs/`:
 
-- [GL80 baseline analysis](docs/GL80_analysis_report.md)
-- [Original discussion notes](docs/airgap_force_fft_discussion.md)
-- [Implementation plan](docs/airgap_force_fft_implementation_plan.md)
+- [Air-gap force 2D FFT guide](docs/README_airgap_force_fft.md)
+- [Two-dimensional FFT analysis method](docs/airgap_fft_2d_method.md)
+- [Reference prototype](docs/airgap_force_fft_prototype.py)
 
 ## Tests
 

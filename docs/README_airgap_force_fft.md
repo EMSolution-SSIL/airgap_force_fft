@@ -3,6 +3,9 @@
 `src/airgap_force_fft.py` reads air-gap flux density and evaluates Maxwell stress,
 integrated torque/UMP, and 2D FFT modes.
 
+For the mathematical formulation and interpretation of the 2-D spectra, see
+[Two-Dimensional FFT Analysis of Air-Gap Flux Density](airgap_fft_2d_method.md).
+
 ## Inputs
 
 Supported formats:
