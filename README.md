@@ -104,3 +104,6 @@ After installation, the CLI can also be invoked as:
 airgap-force-fft --config config.yaml
 ```
 
+## 日本語版
+
+日本語版は [`README_ja.md`](README_ja.md) を参照してください。
